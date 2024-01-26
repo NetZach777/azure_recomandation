@@ -8,7 +8,6 @@ import pickle
 from surprise import SVD
 
 # Configuration de la connexion Azure Blob Storage
-connection_string = "DefaultEndpointsProtocol=https;AccountName=recommandationsvd;AccountKey=/lD8U9uMIVcLP0SP7i2qJPmfDlYxjFaHbrqkvq6y/bTgtEFUqT649RWlp0m74yZk6HPcZVgYHevt+ASt01D+Iw==;EndpointSuffix=core.windows.net"
 container_name = 'model-storage'
 model_blob_name = 'best_svd_model.pkl'
 df_blob_name = 'df_merged_compressed.pkl'
