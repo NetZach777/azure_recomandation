@@ -8,6 +8,7 @@ import pickle
 from surprise import SVD
 
 # Configuration de la connexion Azure Blob Storage
+connection_string = ""
 container_name = 'model-storage'
 model_blob_name = 'best_svd_model.pkl'
 df_blob_name = 'df_merged_compressed.pkl'
