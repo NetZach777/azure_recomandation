@@ -8,7 +8,7 @@ import pickle
 from surprise import SVD
 
 # Configuration de la connexion Azure Blob Storage
-connection_string = ""
+connection_string = "CONNECTION_STRING"
 container_name = 'model-storage'
 model_blob_name = 'best_svd_model.pkl'
 df_blob_name = 'df_merged_compressed.pkl'
@@ -42,7 +42,7 @@ def load_dataframe():
 loaded_model = load_model()
 df_merged = load_dataframe()
 
-# Préparation des données d'interaction (à ajuster en fonction de votre df_merged)
+# Préparation des données d'interaction 
 def prepare_interaction_data(df):
     interaction = df[['user_id', 'article_id', 'session_id']].groupby(by=['user_id', 'article_id'], as_index=False).agg('count')
     interaction.rename(columns={'session_id': 'rating'}, inplace=True)
